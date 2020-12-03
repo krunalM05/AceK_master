@@ -1,0 +1,30 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container all-margin-top">
+    <div class="row">
+        {% for tt in tt_all %}
+        <div class="col-md-4 col-md-4 col-lg-6">
+            <div>
+                <div class="text-center">
+                    <i class="fa fa-calendar-alt" id="cal-icon" aria-hidden="true"></i>
+                    <h1 style="display:inline"> {{ tt.title }}</h1>
+                    <p class="text-danger">{{tt.description}}</p>
+                    <a href="{{ tt.tt_img.url }}" download="{{ tt.tt_img.url }}" class="btn btn-primary btn-sm">Download</a>
+                    <a href="{{ tt.tt_img.url }}" target="_blank" class="btn btn-primary btn-sm">View</a><br><br>
+                </div>
+            </div>
+        <img src="{{ tt.tt_img.url }}" class="img-responsive border-info border border-dark" style="width: 100%;padding:2px;" />
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    #cal-icon{
+font-size:30px;
+padding-right:15px;
+color:red
+}
+</style>
+{% endblock %}

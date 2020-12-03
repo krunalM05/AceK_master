@@ -1,0 +1,32 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+
+{% for cal in calender_img %}
+    <div class="all-margin-top">
+        <div class="text-center">
+            <i class="fa fa-calendar-alt" id="cal-icon" aria-hidden="true"></i>
+            <h1 style="display:inline"> {{ cal.title }}</h1>
+            <br><br>
+            <p class="text-success">{{cal.description}}{{ cal.last_modified }}</p>
+            <a class="btn btn-sm btn-info" href="{{cal.img.url}}" download="{{cal.img.url}}">download</a>
+        </div>
+    </div>
+    <br>
+    <br>
+<div class="container">
+    <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <img src="{{ cal.img.url }}" class="img-responsive border border-info" style="width: 100%;" />
+            </div>
+    </div>
+</div>
+{% endfor %}
+<style>
+    #cal-icon{
+font-size:30px;
+padding-right:15px;
+color:red
+}
+</style>
+{% endblock %}

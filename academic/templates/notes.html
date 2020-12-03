@@ -1,0 +1,267 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<div class="container all-margin-top">
+    <div class="row justify-content-center">
+        <h2><i class="far fa-sticky-note"></i></h2>
+        <h2 style="display:inline;margin-left:10px;">Previous Year Exam Papers</h2>
+        <br> 
+    </div>
+ </div>
+<br>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="d-flex bd-highlight">
+        <div class="p-2 bd-highlight onclick">
+        <a class="btn btn-sm btn-info" href="#sem1">SEM 1</a>
+        </div>
+        <div class="p-2 bd-highlight onclick">
+        <a class="btn btn-sm btn-info" href="#semII">SEM 2</a>
+        </div>
+        <div class="p-2 bd-highlight onclick">
+        <a class="btn btn-sm btn-info onclick" href="#semIII">SEM 3</a>
+        </div>
+        <div class="p-2 bd-highlight">
+        <a class="btn btn-sm btn-info onclick" href="#semIV">SEM 4</a>
+        </div>
+        <div class="p-2 bd-highlight">
+        <a class="btn btn-sm btn-info" href="#semV">SEM 5</a>
+        </div>
+        <div class="p-2 bd-highlight">  
+        <a class="btn btn-sm btn-info" href="#semVI">SEM 6</a>
+        </div>
+        <div class="p-2 bd-highlight">
+        <a class="btn btn-sm btn-info" href="#semVII">SEM 7</a>
+        </div>
+        <div class="p-2 bd-highlight">
+        <a class="btn btn-sm btn-info" href="#semIII">SEM 8</a>   
+        </div>
+        </div>
+    </div>
+</div>
+<!-- sem i -->
+ <div class="container-fluid">
+    <div class="row justify-content-center">
+     <div class="col-sm-10">
+     <div id="semI">   
+      <h3>SEM I</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_one_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+    </div>
+        <!-- sem II -->
+         <div id="semII"> 
+        <h3>SEM II</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_two_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+      <!-- sem III -->
+        <div id="semIII">   
+      <h3>SEM III</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_three_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+    </div>
+        <!-- sem IV -->
+         <div id="semIV"> 
+        <h3>SEM IV</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_four_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+        <!-- sem V -->
+         <div id="semV"> 
+        <h3>SEM V</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_five_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+        <!-- sem VI -->
+         <div id="semVI"> 
+        <h3>SEM VI</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_six_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+        <!-- sem VII -->
+         <div id="semVII"> 
+        <h3>SEM VII</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_seven_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+        <!-- sem VIII -->
+         <div id="semVIII"> 
+        <h3>SEM VIII</h3>           
+        <table class="table table-hover">  
+            <thead class="thead-dark">
+                <tr>
+                    <th>Subject</th>
+                    <th>Year</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pdfs in sem_eight_pdfs %}
+                <tr>
+                    <td>{{ pdfs.sub }}</td>
+                    <td>{{ pdfs.year }}</td>
+                    <td><a href="{{pdfs.pdf_f.url}}">{{pdfs.name}}</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{{pdfs.pdf_f.url}}" download>download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+        </div> 
+        </div> 
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".onclick a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+{% endblock %}

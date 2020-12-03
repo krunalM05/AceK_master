@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Home | ACE </title>
+</head>
+
+<body>
+    <nav class=" navbar navbar-expand-lg bg-info py-lg-0 navbar-light ">
+
+        <a class="navbar-brand" href="home.html">
+            <img src="{% static 'images/logo.png' %}"  class="ace-logo">
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+                id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link nav-hover" href="#">Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">Gallery</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link nav-hover" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-hover" href="#" id="navbardrop" data-toggle="dropdown">
+                        Academics
+                    </a>
+                    <div class="dropdown-menu bg-info">
+                    <a class="dropdown-item nav-hover" href="{% url 'calender' %}">Academic Calender</a>
+                    <a class="dropdown-item nav-hover" href="{% url 'timetable' %}">Time table</a>
+                    <a class="dropdown-item nav-hover" href="{% url 'notes' %}">Study Notes</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#"><i class="fas fa-user"></i></a></li>
+                <li class="nav-item"><a href="#"><i class="fas fa-comment-dots"></i></a></li>
+                <li class="nav-item"><a href="#"><i class="fas fa-bell"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
+{% block content %}
+{% endblock %}
