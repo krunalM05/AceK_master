@@ -1,0 +1,44 @@
+{% load static %}
+body {
+    margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+margin : 20px;
+display:block;
+}
+ul li a{
+list-style:none;
+border-radius: 10px;
+color: #ffffff;
+font-weight : bold;
+}
+.dropdown-menu a{
+list-style:none;
+border-radius: 10px;
+color: #ffffff;
+font-weight : bold;
+}
+.nav-hover:hover{
+color : #ffffff;
+background-color:brown;
+}
+li a i{
+display : inline-block;
+margin : 10px;
+color : brown;
+}
+.ace-logo{
+height :150px;
+width: 250px;
+}
+.navbar-toggler{
+background-color: #ffffff;
+}
+.all-margin-top{
+
+width:100%; margin-top:200px;
+}
+.border{
+ border-width: 3px;
+}
