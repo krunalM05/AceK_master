@@ -19,17 +19,17 @@ d)go to scripts folder inside djangoenv - E:\djangoenv\scripts>
 e)activate virtual environment - E:\djangoenv\scripts>activate 
 
  f) after activation (djangoenv) E:\djangoenv\scripts>
-3 - Now donload this project TODOApp and paste inside djangoenv folder
+3 - Now donload this project and paste inside djangoenv folder
 
 4 - open previosly opened cmd and go to the folder -
 
 (djangoenv) E:\djangoenv\scripts>cd..
 
-(djangoenv) E:\djangoenv>cd TODOApp
+(djangoenv) E:\djangoenv>cd this_app
 5 - Install all the requirements using previously opened CMD where the virtual environment was activated:
 
-(djangoenv) E:\djangoenv\TODOApp>  pip install -r requirements.txt
-6 - Now finally run server using - (djangoenv) E:\djangoenv\TODOApp>python manage.py runserver
+(djangoenv) E:\djangoenv\this_app>  pip install -r requirements.txt
+6 - Now finally run server using - (djangoenv) E:\djangoenv\this_app>python manage.py runserver
 
 7- open server go to url : http://127.0.0.1:8000/
 
